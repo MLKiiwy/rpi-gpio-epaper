@@ -29,6 +29,6 @@
   "homepage": "https://github.com/dbushell/rpi-gpio-epaper#readme",
   "dependencies": {
     "rpi-gpio": "^0.8.1",
-    "spi": "^0.2.0"
+    "spi": "gnurdle/node-spi"
   }
 }
