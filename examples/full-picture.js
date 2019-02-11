@@ -1,5 +1,5 @@
 /**
- * Example from https://gist.github.com/dbushell/dd36bef27ffd278140516151b1ed365c
+ * Incomplete example from https://gist.github.com/dbushell/dd36bef27ffd278140516151b1ed365c
  */
 
 const fs = require('fs');
