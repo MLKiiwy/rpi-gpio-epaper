@@ -38,7 +38,7 @@ async function run() {
 
   const data = EPD.getImageRAM(image);
   await screen.writeDisplayFull(data);
-
+  await EPD.sleep(2000);
   await screen.exit();
   screen = null;
 
