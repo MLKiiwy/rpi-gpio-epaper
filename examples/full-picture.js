@@ -4,7 +4,7 @@
 
 const fs = require("fs");
 const PNG = require("pngjs").PNG;
-const EPD = require("rpi-gpio-epaper");
+const EPD = require("../lib/epd");
 
 function readImage(imagePath) {
   return new Promise((resolve, reject) => {
