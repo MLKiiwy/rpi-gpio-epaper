@@ -3,6 +3,7 @@
  */
 
 const path = require("path");
+const fs = require("fs");
 const PNG = require("pngjs").PNG;
 const EPD = require("../lib/epd");
 
