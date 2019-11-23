@@ -2,16 +2,15 @@
  * Example from https://gist.github.com/dbushell/2207ee93f5d751c526c8909fd2f8ad28
  */
 
-const path = require('path');
-const PNG = require('pngjs').PNG;
-const EPD = require('rpi-gpio-epaper');
+const path = require("path");
+const PNG = require("pngjs").PNG;
+const EPD = require("rpi-gpio-epaper");
 
 function readImage(imagePath) {
   return new Promise((resolve, reject) => {
-    fs
-      .createReadStream(imagePath)
+    fs.createReadStream(imagePath)
       .pipe(new PNG())
-      .on('parsed', function() {
+      .on("parsed", function() {
         const image = EPD.createImage(this.width, this.height);
         for (let y = 0; y < this.height; y++) {
           for (let x = 0; x < this.width; x++) {
@@ -33,7 +32,7 @@ async function run() {
   let screen = new EPD();
   await screen.init();
 
-  const imagePath = path.resolve(process.cwd(), 'picture.png');
+  const imagePath = path.resolve(process.cwd(), "test.png");
   const image = await readImage(imagePath);
 
   const data = EPD.getImageRAM(image);
